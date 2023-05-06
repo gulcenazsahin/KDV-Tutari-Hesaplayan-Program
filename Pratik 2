@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Pratik2 {
+    public static void main(String[] args) {
+        double kdvOrani;
+        double kdvliFiyat;
+        double kdvTutari;
+        double kdvSizFiyat;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Ucreti giriniz: ");
+        kdvSizFiyat = input.nextDouble();
+
+        if (kdvSizFiyat > 0 && kdvSizFiyat <= 1000) {
+            kdvOrani = 0.18;
+        } else {
+            kdvOrani = 0.08;
+        }
+
+        kdvTutari = kdvSizFiyat * kdvOrani;
+        kdvliFiyat = kdvSizFiyat + kdvTutari;
+
+        System.out.println("KDV'siz Fiyat: " + kdvSizFiyat);
+        System.out.println("KDV Oranı: %" + kdvOrani);
+        System.out.println("KDV Tutarı: " + kdvTutari);
+        System.out.println("KDV'li Fiyat: " + kdvliFiyat);
+    }
+}
